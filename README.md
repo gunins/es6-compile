@@ -7,6 +7,9 @@ The `src/main` script will check if arrow functions and es6 class is supported i
 Also will check if es6 methods like `Reflect, Map, Set` etc. are supported,  If not then load `babel-polifyll`.
 
 ###Instalation
+
+First neeed to install `grunt-cli globally` ```npm install -g grunt```
+
 Clone repository, and run ```npm install``` after run ```grunt```
 
 All files are in `src` folder.
