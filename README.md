@@ -4,7 +4,7 @@ This is the skeleton for es6 to es5 babel and requirejs, with client side featur
 
 The `src/main` script will check if arrow functions and es6 class is supported in browser, if supported, then use es6 files directly, if not, then fallback to es5.
 
-Also will check if es6 methods like `Reflect, Map, Set` etc. If not supported then load `babel-polifyll`.
+Also will check if es6 methods like `Reflect, Map, Set` etc. are supported,  If not then load `babel-polifyll`.
 
 ###Instalation
 Clone repository, and run ```npm install``` after run ```grunt```
