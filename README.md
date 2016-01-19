@@ -1,7 +1,7 @@
 ##ES6 AMD Compiler
 
 This is the skeleton for es6 to es5 babel and requirejs, with client side feature validation. There is AMD support only. 
-Because es6 modules currently have missing features, there use AMD(requirejs) modules instead. Will wait until javascript modules will solve paths and module Ids, also facility to combine modules in one file.
+Because es6 modules currently have missing features, there use AMD(requirejs) modules instead. Will wait until javascript modules will solve paths and module Ids, also facility to combine multiple modules in one file.
 
 The `src/main` script will check if arrow functions and es6 class is supported in browser, if supported, then use es6 files directly, if not, then fallback to es5.
 
