@@ -1,4 +1,4 @@
-function check() {
+var check = function () {
     "use strict";
 
     if (typeof Symbol == "undefined") return false;
@@ -10,12 +10,11 @@ function check() {
     }
 
     return true;
-}
+}();
 
-var check = check();
 require({
-    baseUrl: check ? './target/es6' : 'target/es5',
-}, ['es6Features'], function (cb) {
+    baseUrl: check ? 'target/es6' : 'target/es5',
+}, ['utils/es6Features'], function (cb) {
 
     cb(function run() {
         require(['App'], function (App) {

@@ -69,7 +69,24 @@ module.exports = function (grunt) {
 
                 ]
             }
-        }
+        },
+        mocha_phantomjs: {
+            dev: {
+                options: {
+                    urls: [
+                        'http://localhost:8000/test/index.html'
+                    ]
+                }
+            }
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 8000,
+                    base: '.'
+                }
+            }
+        },
 
     });
 
@@ -80,8 +97,13 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
+    grunt.loadNpmTasks('grunt-mocha-phantomjs');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
+
+    grunt.registerTask('test', ['default','connect', 'mocha_phantomjs']);
     // Default task(s).
     grunt.registerTask('default', ['clean', 'requirejs', 'babel', 'concat', 'uglify', 'copy']);
+
 
 };

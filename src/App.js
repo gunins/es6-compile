@@ -20,4 +20,6 @@ define(['./View'], (View) => {
     view.surName = 'Other Test SurName';
 
     view.render();
+
+    return AppView;
 });
